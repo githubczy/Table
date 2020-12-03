@@ -1,0 +1,116 @@
+.table-layout-main{
+    // display: table;
+    display: inline-block;
+    // height: 600px;
+    table-layout: auto;
+    // width: 500px;
+    // overflow-y: scroll;
+    // overflow-x: scroll;
+    ::-webkit-scrollbar{
+
+    }
+    .table-header{
+        // display: table-header-group;
+        // width: 800px;
+        
+       .table-head-item-center,
+        .table-head-item-number{
+            justify-content: center;
+        }
+        .table-head-item-left{
+            justify-content: flex-start;
+        }
+        .table-head-item-right{
+            justify-content: flex-end;
+        }
+        .table-header-item-child{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .header-item-sorter{
+                display: flex;
+                flex-direction: column;
+                width: 20px;
+                .sort-up{
+                    font-size: 12px;
+                    margin-bottom: -2px;
+                }
+                .sort-down{
+                    font-size: 12px;
+                    margin-top: -2px;
+                }
+            }
+        }
+        
+    }
+    .table-body{
+        // display: table-row-group;
+        height: 400px;
+        // width: 800px;
+        overflow-y: scroll;
+        ::-webkit-scrollbar{
+            // display: none !important;
+            z-index: 99;
+            position: relative;
+        }
+    }
+    .table-row{
+        display: table-row;
+        // width: 800px;
+        .table-head-item{
+            display: inline-block;
+            width: 150px;
+        }
+        .table-head-item,
+        .table-cell{
+            display: table-cell;
+            border-bottom: 1px solid;
+            border-right: 1px solid;
+            white-space: nowrap;
+            width: 150px;
+            .cell-input-left{
+                text-align: left;
+            }
+            .cell-input-center{
+                text-align: center;
+            }
+            .cell-input-right{
+                text-align: right;
+            }
+        }
+        .table-cell-selected{
+            background-color: #00aec7;
+            color: #fff;
+            input{
+                background-color: inherit;
+                color: inherit;
+            }
+        }
+        .table-cell-number{
+            width: 150px;
+            text-align: center;
+        }
+        .table-head-item{
+            padding: 4px 11px;
+            .split{
+                border-left: 2px solid;
+                display: inline;
+                width: 2px;
+                height:  14px;
+                cursor: e-resize;
+            }
+        }
+        .table-head-item-selected{
+            background-color: #00aec7;
+            color: #fff;
+        }
+    }
+    .table-row-selected{
+        background-color: #00aec7;
+        color: #fff;
+        input{
+            background-color: inherit;
+            color: inherit;
+        }
+    }
+}
